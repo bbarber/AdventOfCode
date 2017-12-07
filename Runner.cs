@@ -12,7 +12,11 @@ namespace AdventOfCode
             //Problem02Part1.Run();
             //Problem02Part2.Run();
             //Problem03Part1.Run();
-            Problem03Part2.Run();
+            //Problem03Part2.Run();
+            //Problem04Part1.Run();
+            //Problem04Part2.Run();
+            //Problem05Part1.Run();
+            Problem05Part2.Run();
         }
     }  
 }
