@@ -15,6 +15,12 @@ namespace AdventOfCode
         public int TotalWeight => Weight + SubWeight;
 
         public List<string> Children { get; set; }
+        public List<Program> ChildrenPrograms { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Weight} + {SubWeight} = {TotalWeight}";
+        }
     }
 
 
@@ -56,12 +62,12 @@ namespace AdventOfCode
             foreach(var program in programs)
             {
                 program.SubWeight = GetSubWeight(program, programs);
+                program.ChildrenPrograms = program.Children.Select(c => programs.First(p => p.Name == c)).ToList();
             }
 
             foreach(var program in programs.Where(p => p.Children.Any()))
             {
-                var siblings = program.Children.Select(c => programs.First(p => p.Name == c)).ToList();
-                if(siblings.GroupBy(s => s.TotalWeight).Count() != 1)
+                if(program.ChildrenPrograms.GroupBy(s => s.TotalWeight).Count() != 1)
                 {
                     // Winning
                 }
