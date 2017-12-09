@@ -50,6 +50,7 @@ namespace AdventOfCode
                 };
             });
 
+            var superMax = 0;
             foreach (var instruction in instructions)
             {
                 bool operate = IsExpressionTrue(
@@ -60,6 +61,8 @@ namespace AdventOfCode
                 if (operate)
                 {
                     instruction.Register.Value += instruction.IncAmount;
+                    if (instruction.Register.Value > superMax)
+                        superMax = instruction.Register.Value;
                 }
             }
 
@@ -93,7 +96,8 @@ namespace AdventOfCode
     {
         public static void Run()
         {
-
+            // See above (superMax)
+            Problem08Part1.Run();
         }
     }
 }
