@@ -9,7 +9,6 @@ namespace AdventOfCode
 {
     public class Problem04Part1
     {
-
         public static void Run()
         {
             var input = File.ReadAllLines("Problem04.txt");
