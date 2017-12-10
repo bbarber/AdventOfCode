@@ -23,8 +23,10 @@ namespace AdventOfCode
             //Problem07Part2.Run();
             //Problem08Part1.Run();
             //Problem08Part2.Run();
-            Problem09Part1.Run();
+            //Problem09Part1.Run();
             //Problem09Part2.Run();
+            Problem10Part1.Run();
+            //Problem10Part2.Run();
         }
     }  
 }
