@@ -7,7 +7,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            Problem12Part2.Run();
+            Problem13Part2.Run();
         }
     }  
 }
